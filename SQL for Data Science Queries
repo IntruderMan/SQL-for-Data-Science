@@ -1,0 +1,64 @@
+1. Retrieve all the data from the tracks table. Who is the composer for track 18?
+    Select *
+    From Tracks; 
+Answer : AC/DC     
+
+2. Retrieve all data from the artists table. Look at the list of artists, how many artists are you familiar with (there is no wrong answer here)?
+    Select *
+    From Artists;
+Answer : 25 Artists
+
+3. Retrieve all data from the invoices table. What is the billing address for customer 31?
+    Select *
+    From Invoices;
+Answer : 194A Chain Lake Drive
+
+4. Return the playlist id, and name from the playlists table. How many playlists are there? Which would you classify is your favorite from this list?
+    Select Playlistid,
+    Name
+    From Playlists;
+Answer : Music Videos
+
+5. Return the Customer Id, Invoice Date, and Billing City from the Invoices table. What city is associated with Customer ID number 42?
+   What was the invoice date for the customer in Santiago?
+    Select CustomerId,
+    InvoiceDate, 
+    BillingCity 
+    From Invoices;
+Answer : Bordeaux
+         2009-02-02 00:00:00 
+         
+6. Return the First Name, Last Name, Email, and Phone, from the Customers table. What is the telephone number for Jennifer Peterson?
+    Select FirstName, 
+    LastName, 
+    Email, 
+    Phone
+    From Customers;
+Answer : +1 (604) 688-2255
+
+7. Return the Track Id, Genre Id, Composer, Unit Price from the Tracks table. How much do these tracks cost?
+    Select TrackId, 
+    GenreId, 
+    Composer, 
+    UnitPrice 
+    From Tracks;
+Answer : 4 four
+
+8. Select all the columns from the Playlist Track table and limit the results to 10 records. How might this information be used?
+    Select *
+    From Playlist_track 
+    Limit 10;
+Answer : 10
+
+9. Select all the columns from the Media Types table and limit the results to 50 records. What happened when you ran this query? Were you able to get all 50 records?
+    Select *
+    From Media_types
+    Limit 50;
+Answer : stack overflow
+
+10. Select all the columns from the Albums table and limit the results to 5 records. How many columns are in the albums table? 
+    What is the name of the 9th album in this list?
+     Select *
+     From Albums;
+Answer : stack overflow    
+     
