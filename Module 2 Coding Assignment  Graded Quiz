@@ -1,0 +1,152 @@
+Question 1
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the tracks that have a length of 5,000,000 milliseconds or more.
+
+Select Count(TrackId)
+from Tracks
+where Milliseconds >= 5000000
+
+How many tracks are returned?
+
+Answer : 2
+==========================================================================================================================================================================================================================================
+
+Question 2
+All of the questions in this quiz refer to the open source Chinook Database. 
+Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the invoices whose total is between $5 and $15 dollars.
+
+select count(DISTINCT i.InvoiceId)
+from Invoices as i
+where i.Total between 5 and 15
+
+While the query in this example is limited to 10 records,
+running the query correctly will indicate how many total records there are - enter that number below.
+
+Answer : 168
+==========================================================================================================================================================================================================================================
+
+Question 3
+All of the questions in this quiz refer to the open source Chinook Database. 
+Please familiarize yourself with the ER diagram to familiarize yourself with the table and column 
+names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the customers from the following States: RJ, DF, AB, BC, CA, WA, NY.
+
+select FirstName, LastName, Company, State
+from Customers
+where State in ('RJ', 'DF', 'AB', 'BC', 'CA', 'WA', 'NY')
+
+What company does Jack Smith work for?
+
+Answer : Microsoft Corp
+==========================================================================================================================================================================================================================================
+
+Question 4
+All of the questions in this quiz refer to the open source Chinook Database. 
+Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names 
+to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the invoices for customer 56 and 58 where the total was between $1.00 and $5.00.
+
+select InvoiceId, InvoiceDate, CustomerId, Total
+from Invoices
+where CustomerId in (56, 58) AND (Total >= 1.00 and Total <= 5.00)
+
+What was the invoice date for invoice ID 315?
+
+Answer : 10-27-2012
+==========================================================================================================================================================================================================================================
+
+Question 5
+All of the questions in this quiz refer to the open source Chinook Database. 
+Please familiarize yourself with the ER diagram to familiarize yourself with the table and column 
+names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the tracks whose name starts with 'All'.
+
+select t.Name, COUNT(t.Name)
+from Tracks t
+where t.Name like 'All%'
+
+While only 10 records are shown, the query will indicate how many total records there are for this 
+query - enter that number below.
+
+Answer : 15
+==========================================================================================================================================================================================================================================
+
+Question 6
+All of the questions in this quiz refer to the open source Chinook Database. 
+Please familiarize yourself with the ER diagram to familiarize yourself with the table and column 
+names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the customer emails that start with "J" and are from gmail.com.
+
+select c.Email
+from Customers c
+where c.Email like 'J%gmail.com'
+
+
+Enter the one email address returned (you will likely need to scroll to the right) below.
+
+Answer : jubarnett@gmail.com
+==========================================================================================================================================================================================================================================
+
+Question 7
+All of the questions in this quiz refer to the open source Chinook Database. 
+Please familiarize yourself with the ER diagram to familiarize yourself with the table and column 
+names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the invoices from the billing city Brasília, Edmonton, and Vancouver and sort 
+in descending order by invoice ID.
+
+select i.InvoiceId, i.Total
+from Invoices i
+where i.BillingCity in ('Brasilia', 'Edmonton', 'Vancouver')
+order by i.InvoiceId DESC
+
+What is the total invoice amount of the first record returned? Enter the number below without a $ 
+sign. Remember to sort in descending order to get the correct answer.
+
+Answer : 13.86
+==========================================================================================================================================================================================================================================
+
+Question 8
+Question 8
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself 
+with the ER diagram to familiarize yourself with the table and column names to write accurate queries 
+and get the appropriate answers.
+
+Run Query: Show the number of orders placed by each customer (hint: this is found in the invoices 
+table) and sort the result by the number of orders in descending order.
+
+select i.CustomerId , COUNT(i.InvoiceId)
+from Invoices i
+group by i.CustomerId
+order by COUNT(i.InvoiceId) DESC
+
+What is the number of items placed for the 8th person on this list? Enter that number below.
+
+Answer : 7
+==========================================================================================================================================================================================================================================
+
+Question 9
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself 
+with the ER diagram to familiarize yourself with the table and column names to write accurate queries 
+and get the appropriate answers.
+
+Run Query: Find the albums with 12 or more tracks.
+
+select t.TrackId, t.AlbumId
+from Tracks t
+group by t.AlbumId
+having COUNT(DISTINCT t.TrackId) >= 12;
+
+
+Answer : 158
+==========================================================================================================================================================================================================================================
+==========================================================================================================================================================================================================================================
+................................................Thank You..................................................................................................................................... 
+==========================================================================================================================================================================================================================================
